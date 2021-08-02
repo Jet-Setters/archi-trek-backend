@@ -4,6 +4,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const { default: axios } = require('axios');
 
 
 
@@ -20,13 +21,20 @@ const PORT = process.env.PORT || 3002;
 // Root route
 app.get('/', (req, res) => {
   res.send('This is the root route');
-})
+});
+
+// TODO: Add a key and the proper variables for key and the search query
+app.get('/location', (rec, res) => {
+  const API = `https://us1.locationiq.com/v1/search.php?key=${key}&q=${searchQuery}&format=json`;
+  const locationRes = await axios.get(API);
+  console.log('LocationIQ Data: ', locationRes);
+});
 
 
 // Default route
 app.get('/*', (req, res) => {
   res.status(404).send('Route not found');
-})
+});
 
 
 //--------------------Listening-------------------------------
