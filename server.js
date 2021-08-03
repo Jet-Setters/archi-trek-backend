@@ -4,7 +4,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const { default: axios } = require('axios');
+const axios = require('axios');
 
 
 
