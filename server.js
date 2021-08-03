@@ -1,8 +1,8 @@
 'use strict';
 
 //----------------------Dependencies-------------------------
+require('dotenv').config();
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
 const axios = require('axios');
 
@@ -11,7 +11,6 @@ const axios = require('axios');
 //--------------------Configurations--------------------------
 const app = express();
 app.use(cors());
-dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 3002;
