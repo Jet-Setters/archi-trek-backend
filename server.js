@@ -6,6 +6,13 @@ const express = require('express');
 const cors = require('cors');
 const { default: axios } = require('axios');
 
+//----------------------Modules-------------------------
+
+const getLocation = require('./modules/get-location.js')
+const getMap = require('./modules/get-map.js')
+const getWeather = require('./modules/get-weather.js')
+const notFoundHandler = require('./modules/not-found.js')
+
 
 
 //--------------------Configurations--------------------------
@@ -21,6 +28,10 @@ const PORT = process.env.PORT || 3002;
 app.get('/', (req, res) => {
   res.send('This is the root route');
 });
+app.get('/location', getLocation);
+app.get('/weather', getWeather);
+app.get('/map', getMap);
+app.get('*', notFoundHandler);
 
 // // TODO: Add a key and the proper variables for key and the search query
 // app.get('/location', (rec, res) => {
