@@ -1,0 +1,27 @@
+{
+  "name": "archi-trek-backend",
+  "version": "1.0.0",
+  "description": "# Archi-Trek",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jet-Setters/archi-trek-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jet-Setters/archi-trek-backend/issues"
+  },
+  "homepage": "https://github.com/Jet-Setters/archi-trek-backend#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "espress": "^0.0.0"
+  }
+}
