@@ -9,6 +9,7 @@ function getLocation(req, res) {
   // checkCache(searchQuery)
   //   .then(data => res.send(data))
   //   .catch(err => console.error(err));
+  console.log(locationAPI);
 
   axios.get(locationAPI)
     .then(results => {

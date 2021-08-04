@@ -8,12 +8,13 @@ const { default: axios } = require('axios');
 
 //----------------------Modules-------------------------
 
-const getLocation = require('./modules/get-location.js')
-const getMap = require('./modules/get-map.js')
-const getWeather = require('./modules/get-weather.js')
-const getCovidData = require('./modules/get-covid-data.js')
-const getDayPlanner = require('./modules/get-dayPlanner.js')
-const notFoundHandler = require('./modules/not-found.js')
+const getLocation = require('./modules/get-location.js');
+const getMap = require('./modules/get-map.js');
+const getWeather = require('./modules/get-weather.js');
+const getCovidData = require('./modules/get-covid-data.js');
+const notFoundHandler = require('./modules/not-found.js');
+const getCountryCode = require('./modules/country-codes.js');
+
 
 
 
@@ -38,6 +39,7 @@ app.get('/map', getMap);
 app.get('/covid', getCovidData);
 app.get('dayplanner', getDayPlanner);
 app.get('*', notFoundHandler);
+
 
 
 
