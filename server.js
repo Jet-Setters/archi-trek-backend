@@ -12,6 +12,7 @@ const getLocation = require('./modules/get-location.js')
 const getMap = require('./modules/get-map.js')
 const getWeather = require('./modules/get-weather.js')
 const getCovidData = require('./modules/get-covid-data.js')
+const getDayPlanner = require('./modules/get-dayPlanner.js')
 const notFoundHandler = require('./modules/not-found.js')
 
 
@@ -29,18 +30,15 @@ const PORT = process.env.PORT || 3002;
 app.get('/', (req, res) => {
   res.send('This is the root route');
 });
+
+
 app.get('/location', getLocation);
 app.get('/weather', getWeather);
 app.get('/map', getMap);
 app.get('/covid', getCovidData);
+app.get('dayplanner', getDayPlanner);
 app.get('*', notFoundHandler);
 
-// // TODO: Add a key and the proper variables for key and the search query
-// app.get('/location', (rec, res) => {
-//   const API = `https://us1.locationiq.com/v1/search.php?key=${key}&q=${searchQuery}&format=json`;
-//   const locationRes = await axios.get(API);
-//   console.log('LocationIQ Data: ', locationRes);
-// });
 
 
 // Default route
