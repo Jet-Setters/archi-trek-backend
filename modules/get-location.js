@@ -11,8 +11,8 @@ function getLocation(req, res) {
   //   .catch(err => console.error(err));
 
   axios.get(locationAPI)
-    .then(data => {
-      res.status(200).send(data)
+    .then(results => {
+      res.status(200).send(results.data)
     })
     .catch(err => {
       res.status(500).send(err)

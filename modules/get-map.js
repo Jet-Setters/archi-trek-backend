@@ -9,7 +9,7 @@ function getMap(req, res) {
 
   axios.get(mapAPI)
     .then(mapResponse => {
-      res.status(200).send(mapResponse)
+      res.status(200).send(mapResponse.data)
     })
     .catch(err => {
       res.status(500).send(err)
