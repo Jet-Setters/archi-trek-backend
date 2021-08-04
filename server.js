@@ -12,6 +12,7 @@ const getLocation = require('./modules/get-location.js');
 const getMap = require('./modules/get-map.js');
 const getWeather = require('./modules/get-weather.js');
 const getCovidData = require('./modules/get-covid-data.js');
+const getDayPlanner = require('./modules/get-dayPlanner');
 const notFoundHandler = require('./modules/not-found.js');
 const getCountryCode = require('./modules/country-codes.js');
 
@@ -37,7 +38,7 @@ app.get('/location', getLocation);
 app.get('/weather', getWeather);
 app.get('/map', getMap);
 app.get('/covid', getCovidData);
-app.get('dayplanner', getDayPlanner);
+app.get('/dayplanner', getDayPlanner);
 app.get('*', notFoundHandler);
 
 

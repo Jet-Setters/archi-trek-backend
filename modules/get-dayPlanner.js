@@ -20,4 +20,4 @@ function getDayPlanner (req, res) {
     })
   };
 
-module.export = getDayPlanner;
+module.exports = getDayPlanner;
