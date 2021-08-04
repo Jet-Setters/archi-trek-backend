@@ -17,6 +17,7 @@ const getCountryCode = require('./modules/country-codes.js');
 
 
 
+
 //--------------------Configurations--------------------------
 const app = express();
 app.use(cors());
@@ -30,19 +31,16 @@ const PORT = process.env.PORT || 3002;
 app.get('/', (req, res) => {
   res.send('This is the root route');
 });
+
+
 app.get('/location', getLocation);
 app.get('/weather', getWeather);
 app.get('/map', getMap);
 app.get('/covid', getCovidData);
+app.get('dayplanner', getDayPlanner);
 app.get('*', notFoundHandler);
 
 
-// // TODO: Add a key and the proper variables for key and the search query
-// app.get('/location', (rec, res) => {
-//   const API = `https://us1.locationiq.com/v1/search.php?key=${key}&q=${searchQuery}&format=json`;
-//   const locationRes = await axios.get(API);
-//   console.log('LocationIQ Data: ', locationRes);
-// });
 
 
 // Default route

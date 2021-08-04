@@ -235,6 +235,7 @@ const express = require('express');
   'AE' : 'United Arab Emirates',
   'GB' : 'United Kingdom',
   'US' : 'United States',
+  'US' : 'USA',
   'UM' : 'United States Outlying Islands',
   'UY' : 'Uruguay',
   'UZ' : 'Uzbekistan',
