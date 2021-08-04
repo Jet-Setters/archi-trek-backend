@@ -3,8 +3,9 @@ const axios = require('axios');
 const countryCodes = require('country-codes.js')
 
 function getCovidData(req, res) {
-  const country = req.query.searchQuery
-  const code = Object.keys(countryCodes).find(key => countryCodes[key] === country)
+  const string = req.query.address
+  const country = string.split(", ")
+  const code = Object.keys(countryCodes).find(key => countryCodes[key] === country[country.length - 1])
 
   const covidAPI = `http://corona-api.com/countries/${code}`
   axios.get(covidAPI)
