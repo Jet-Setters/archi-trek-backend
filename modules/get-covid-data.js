@@ -1,6 +1,6 @@
 'use strict';
 const axios = require('axios');
-const countryCodes = require('country-codes.js')
+const countryCodes = require('./country-codes.js')
 
 function getCovidData(req, res) {
   const country = req.query.searchQuery

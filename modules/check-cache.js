@@ -2,6 +2,7 @@
 const axios = require('axios');
 const cache = require('./cache.js');
 
+
 function checkCache(searchQuery) {
   const key = 'location-' + searchQuery;
   const url = `https://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&lat=${lat}&lon=${lon}&city=${searchQuery}&units=I`
