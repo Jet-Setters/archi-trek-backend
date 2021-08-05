@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 app.get('/location', getLocation);
 app.get('/weather', getWeather);
 app.get('/covid', getCovidData);
-app.get('/dayplanner', getDayPlanner);
+app.get('/dayPlanner', getDayPlanner);
 app.get('*', notFoundHandler);
 
 
